@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="DoctorDashBoard" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="454.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mark1.DoctorDashController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="61.0" layoutY="83.0" prefHeight="566.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="456.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="DoctorImageView" fitHeight="139.0" fitWidth="155.0" layoutX="32.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="34.0" layoutY="183.0" prefHeight="24.0" prefWidth="71.0" text="Doctor ID:">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Doctor_ID" layoutX="119.0" layoutY="183.0" prefHeight="24.0" prefWidth="46.0" text="DID-1">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Line endX="84.66667175292969" endY="-1.52587890625E-5" layoutX="100.0" layoutY="220.0" startX="-85.83332061767578" startY="-1.52587890625E-5" />
+                        <Label layoutX="16.0" layoutY="228.0" prefHeight="24.0" prefWidth="71.0" text="Feature:">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Doctor_Dash" layoutX="18.0" layoutY="254.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="33.0" prefWidth="167.0" text="Dashboard">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="Doctor_Patient" layoutX="18.0" layoutY="303.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="33.0" prefWidth="167.0" text="Patient">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="Doctor_Profile" layoutX="19.0" layoutY="352.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="33.0" prefWidth="167.0" text="Profile Settings">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Label layoutX="21.0" layoutY="166.0" text="User Name:">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="UserDisplay" layoutX="123.0" layoutY="167.0" text="User">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="47.0" prefWidth="711.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="46.0" prefWidth="197.0">
+                           <children>
+                              <Label layoutX="12.0" layoutY="14.0" text="Patient Monitoring system">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="201.0" layoutY="1.0" prefHeight="45.0" prefWidth="469.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Doctor Dashboard">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="520.0" layoutY="16.0" text="Active">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Circle fill="#20e053" layoutX="579.0" layoutY="24.0" radius="9.0" stroke="#14eb2a" strokeType="INSIDE" />
+                              <Line endX="100.0" endY="-26.666671752929688" layoutX="406.0" layoutY="64.0" startX="100.0" startY="-53.99998092651367" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="437.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="PatientForm" prefHeight="406.6666666666667" prefWidth="470.6666666666667" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="18.0" layoutY="8.0" text="Patient Information">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="50.0" text="Patient ID">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientID" layoutX="18.0" layoutY="71.0" prefHeight="31.0" prefWidth="356.0" promptText="Ex:23244232" />
+                              <Label layoutX="17.0" layoutY="106.0" text="Patient Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientName" layoutX="17.0" layoutY="127.0" prefHeight="31.0" prefWidth="356.0" promptText="Ex: Ram" />
+                              <Label layoutX="19.0" layoutY="165.0" text="Patient Gender">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="PatientGender" layoutX="18.0" layoutY="189.0" prefHeight="25.0" prefWidth="205.0" promptText="Select your Gender" />
+                              <Label layoutX="18.0" layoutY="227.0" text="Patient Phone No">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientPhone" layoutX="18.0" layoutY="247.0" prefHeight="31.0" prefWidth="354.0" promptText="Ex: 901928191" />
+                              <Label layoutX="21.0" layoutY="283.0" text="Password">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="PatientPass" layoutX="19.0" layoutY="304.0" prefHeight="32.0" prefWidth="352.0" promptText="At least 8 characters needed" />
+                              <Button fx:id="Patient_Next" layoutX="20.0" layoutY="353.0" mnemonicParsing="false" onAction="#NextPatientForm" prefHeight="32.0" prefWidth="173.0" text="Save and Next">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="PatientCancelBtn" layoutX="206.0" layoutY="353.0" mnemonicParsing="false" onAction="#resetPatientData" prefHeight="32.0" prefWidth="173.0" text="Cancel">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="PatientNextForm" layoutY="0.33333333333333337" prefHeight="406.6666666666667" prefWidth="470.6666666666667" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="5.0" text="Health issue:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="HealthIssue" layoutX="8.0" layoutY="27.0" prefHeight="31.0" prefWidth="371.0" promptText="Ex: Diabetes, Heart Attack, etc" />
+                              <TextField fx:id="PatientTemp" layoutX="9.0" layoutY="85.0" prefHeight="31.0" prefWidth="368.0" promptText="Ex: 20 (Fahrenheit)" />
+                              <Label layoutX="9.0" layoutY="64.0" text="Temperature">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientBloodPressure" layoutX="11.0" layoutY="145.0" prefHeight="31.0" prefWidth="365.0" promptText="Ex: 120 mmHg" />
+                              <Label layoutX="10.0" layoutY="124.0" text="Blood Pressure:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientSpO2" layoutX="10.0" layoutY="205.0" prefHeight="31.0" prefWidth="366.0" promptText="Ex: 12%" />
+                              <Label layoutX="11.0" layoutY="183.0" text="SpO2 Level:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientSugarLevel" layoutX="11.0" layoutY="262.0" prefHeight="31.0" prefWidth="365.0" promptText="Ex: 2.5 mg/dL" />
+                              <Label layoutX="12.0" layoutY="242.0" text="Blood Sugar Level:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PatientECG" layoutX="11.0" layoutY="321.0" prefHeight="31.0" prefWidth="367.0" promptText="Ex: 20 mV" />
+                              <Label layoutX="12.0" layoutY="301.0" text="ECG or EKG:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="PatientSubmit" layoutX="12.0" layoutY="363.0" mnemonicParsing="false" onAction="#patientAdd" prefHeight="33.0" prefWidth="177.0" text="Submit" />
+                              <Button fx:id="PatientNextCancelBtn" layoutX="205.0" layoutY="364.0" mnemonicParsing="false" onAction="#resetPatientData" prefHeight="33.0" prefWidth="177.0" text="Cancel" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="DoctorDash" prefHeight="406.6666666666667" prefWidth="596.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="DoctorMain" prefHeight="223.0" prefWidth="596.0" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="PatientIDs" prefWidth="42.666683197021484" text=" ID" />
+                                    <TableColumn fx:id="PatientNames" prefWidth="60.66669464111328" text="Name" />
+                                    <TableColumn fx:id="PatientGenders" prefWidth="55.33331298828125" text="Gender" />
+                                    <TableColumn fx:id="PatientIssues" prefWidth="53.3333740234375" text="Issue" />
+                                    <TableColumn fx:id="PatientITemps" prefWidth="53.3333740234375" text="Temp" />
+                                    <TableColumn fx:id="PatientBps" prefWidth="53.3333740234375" text="BP" />
+                                    <TableColumn fx:id="PatientSpO2s" prefWidth="53.3333740234375" text="SpO2" />
+                                    <TableColumn fx:id="PatientSugar" prefWidth="53.3333740234375" text="Sugar" />
+                                    <TableColumn fx:id="PatientECGs" prefWidth="53.3333740234375" text="ECG" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                            <AnchorPane layoutY="222.0" minHeight="0.0" minWidth="0.0" prefHeight="183.0" prefWidth="596.0">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="35.0" text=" ID:" />
+                                    <TextField fx:id="UpdateIDs" layoutX="48.0" layoutY="33.0" prefHeight="25.0" prefWidth="143.0" promptText="Eg: PID-2" />
+                                    <Label layoutX="203.0" layoutY="37.0" text="Name:" />
+                                    <TextField fx:id="UpdateNames" layoutX="239.0" layoutY="33.0" promptText="Eg: Mahendra Singh" />
+                                    <Label layoutX="394.0" layoutY="37.0" text="Gender:" />
+                                    <ComboBox fx:id="UpdateGenders" layoutX="441.0" layoutY="32.0" prefHeight="25.0" prefWidth="141.0" promptText="Gender:" />
+                                    <TextField fx:id="UpdateIssues" layoutX="49.0" layoutY="64.0" prefHeight="25.0" prefWidth="142.0" promptText="Eg: Diabetes, Cancer,etc." />
+                                    <Label layoutX="15.0" layoutY="67.0" text="Issue:" />
+                                    <Label layoutX="11.0" layoutY="103.0" text="Temp:" />
+                                    <TextField fx:id="UpdateTemps" layoutX="50.0" layoutY="99.0" prefHeight="25.0" prefWidth="143.0" promptText="Eg: 30 (Degree Celcius)" />
+                                    <TextField fx:id="UpdateSpO2s" layoutX="441.0" layoutY="65.0" prefHeight="25.0" prefWidth="143.0" promptText="Eg: 30%" />
+                                    <Label layoutX="401.0" layoutY="68.0" text="SpO2" />
+                                    <TextField fx:id="UpdateSugars" layoutX="440.0" layoutY="98.0" prefHeight="25.0" prefWidth="144.0" promptText="3.2 mg/dL" />
+                                    <Label layoutX="400.0" layoutY="99.0" text="Sugar:" />
+                                    <TextField fx:id="UpdateECGs" layoutX="239.0" layoutY="66.0" onAction="#resetPatientUpdate" promptText="Eg: 20 mV" />
+                                    <Label layoutX="204.0" layoutY="68.0" text="ECG:" />
+                                    <TextField fx:id="UpdateBps" layoutX="238.0" layoutY="99.0" promptText="Eg: 30%" />
+                                    <Label layoutX="206.0" layoutY="103.0" text="BP:" />
+                                    <Button fx:id="UpdateBtn" layoutX="80.0" layoutY="139.0" mnemonicParsing="false" onAction="#UpdateData" prefHeight="33.0" prefWidth="133.0" text="Update">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="ResetBtn" layoutX="232.0" layoutY="139.0" mnemonicParsing="false" onAction="#UpdatePatientClear" prefHeight="33.0" prefWidth="133.0" text="Reset">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="DeleteBtn" layoutX="383.0" layoutY="139.0" mnemonicParsing="false" onAction="#DeleteEntry" prefHeight="33.0" prefWidth="133.0" text="Delete">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UpdateDoctorProfile" prefHeight="406.6666666666667" prefWidth="596.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="8.0" text="Personal Profile" underline="true">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="74.0" layoutY="51.0" text="ID:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="55.0" layoutY="81.0" text="Name:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="UpdateDoctorID" layoutX="122.0" layoutY="47.0" prefHeight="25.0" prefWidth="266.0" />
+                              <TextField fx:id="UpdateDoctorName" layoutX="123.0" layoutY="79.0" prefHeight="25.0" prefWidth="266.0" promptText="Full Name" />
+                              <Label layoutX="37.0" layoutY="114.0" text="Password:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="UpdateDoctorPass" layoutX="123.0" layoutY="111.0" prefHeight="25.0" prefWidth="266.0" promptText="Atleast 8 characters needed" />
+                              <Label layoutX="56.0" layoutY="146.0" text="Email:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="UpdateDoctorEmail" layoutX="124.0" layoutY="142.0" prefHeight="25.0" prefWidth="266.0" promptText="Domain@gmail.com" />
+                              <Label layoutX="50.0" layoutY="179.0" text="Gender:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="UpdateDoctorGender" layoutX="124.0" layoutY="175.0" prefHeight="25.0" prefWidth="154.0" promptText="Gender" />
+                              <Label layoutX="34.0" layoutY="210.0" text="Phone No:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="UpdateDoctorPhoneNo" layoutX="124.0" layoutY="206.0" prefHeight="25.0" prefWidth="266.0" promptText="92xxxxxxxx" />
+                              <Label layoutX="28.0" layoutY="244.0" text="Specialised:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="UpdateDoctorSpecialised" layoutX="124.0" layoutY="240.0" prefHeight="25.0" prefWidth="266.0" promptText="Dentist, Cardiologist,etc." />
+                              <Label layoutX="40.0" layoutY="278.0" text="Address:">
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="UpdateResetBtn" layoutX="166.0" layoutY="343.0" mnemonicParsing="false" onAction="#doctorClear" prefHeight="37.0" prefWidth="100.0" text="Reset">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="UpdateDeleteBtn" layoutX="278.0" layoutY="343.0" mnemonicParsing="false" onAction="#DeleteAccount" prefHeight="37.0" prefWidth="131.0" text="Delete Account">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="UpdateDoctorBtn" layoutX="56.0" layoutY="343.0" mnemonicParsing="false" onAction="#updateDoctorProfile" prefHeight="37.0" prefWidth="100.0" text="Update">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="UpdateDoctorImageView" fitHeight="139.0" fitWidth="155.0" layoutX="430.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/user.png" />
+                                 </image>
+                              </ImageView>
+                              <TextArea fx:id="UpdateDoctorAddress" layoutX="124.0" layoutY="273.0" prefHeight="60.0" prefWidth="263.0" promptText="Enter a valid address" />
+                              <Label layoutX="436.0" layoutY="8.0" text="Profile picture:">
+                                 <font>
+                                    <Font name="Arial Black" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="UpdateDoctorImage" layoutX="461.0" layoutY="176.0" mnemonicParsing="false" onAction="#addPhoto" text="Add image" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
